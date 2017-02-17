@@ -1,16 +1,16 @@
 /**
- * Directory prompt example
+ * File path prompt example
  */
 
 "use strict";
 var inquirer = require("inquirer");
-inquirer.registerPrompt('directory', require('./index'));
+inquirer.registerPrompt('filePath', require('./index'));
 
 inquirer.prompt([
   {
-    type: "directory",
+    type: "filePath",
     name: "path",
-    message: "In what directory would like to perform this action?",
+    message: "What file would you like to perform this action on?",
     basePath: "./node_modules"
   }
 ], function( answers ) {
