@@ -39,7 +39,9 @@ function Prompt() {
   }
 
   this.basePath = path.isAbsolute(this.opt.basePath) ? path.resolve(this.opt.basePath) : path.resolve(process.cwd(), this.opt.basePath);
-  this.currentPath = this.basePath;
+  this.currentPath = this.opt.currentPath
+    ? path.isAbsolute(this.opt.currentPath) ? path.resolve(this.opt.currentPath) : path.resolve(process.cwd(), this.opt.currentPath)
+    : this.basePath;
 
   this.opt.choices = new Choices(this.createChoices(this.basePath, 0), this.answers);
   this.selected = 0;
