@@ -1,5 +1,5 @@
 {
-  "name": "inquirer-file-path",
+  "name": "@bryce-gibson/inquirer-file-path",
   "version": "1.0.0",
   "description": "a file (relative to given path) selector for Inquirer.js",
   "main": "index.js",
